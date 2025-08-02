@@ -16,7 +16,7 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #172601;
+    background-color: #2C4001;
     color: white;
     padding: 15px 30px;
 }
@@ -219,76 +219,4 @@ a {
 
 .card:hover {
   background-color: #e2e8f0;
-}
-
-.login-card {
-  max-width: 400px;
-  margin: 5rem auto;
-  padding: 2.5rem 3rem;
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  text-align: center;
-}
-
-.login-card h2 {
-  margin-bottom: 2rem;
-  font-weight: 700;
-  color: #2563eb;
-  font-size: 2rem;
-}
-
-.login-card form input[type="text"],
-.login-card form input[type="password"],
-.login-card form input[type="email"] {
-  width: 100%;
-  padding: 12px 15px;
-  margin-bottom: 1.4rem;
-  border: 1.8px solid #cbd5e1;
-  border-radius: 8px;
-  font-size: 1rem;
-  transition: border-color 0.3s ease;
-}
-
-.login-card form input[type="text"]:focus,
-.login-card form input[type="password"]:focus,
-.login-card form input[type="email"]:focus {
-  border-color: #2563eb;
-  outline: none;
-  box-shadow: 0 0 8px rgba(37, 99, 235, 0.4);
-}
-
-.login-card form button {
-  width: 100%;
-  padding: 12px;
-  background-color: #2563eb;
-  border: none;
-  border-radius: 10px;
-  color: white;
-  font-weight: 700;
-  font-size: 1.1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.login-card form button:hover {
-  background-color: #1e40af;
-}
-
-.login-card p {
-  margin-top: 1.5rem;
-  font-size: 0.95rem;
-  color: #4b5563;
-}
-
-.login-card p a {
-  color: #2563eb;
-  font-weight: 600;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.login-card p a:hover {
-  color: #1e40af;
 }
