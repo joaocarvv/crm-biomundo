@@ -1,0 +1,294 @@
+/* Reset básico */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #1e293b;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Header - tudo em uma linha */
+.crm-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #172601;
+    color: white;
+    padding: 15px 30px;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 50px;
+    object-fit: contain;
+}
+
+/* Central navigation */
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #888888;
+}
+
+/* User info */
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.avatar {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}
+
+.crm-footer {
+    background-color: #172601;
+    color: white;
+    text-align: center;
+    padding: 20px 30px;
+    font-size: 0.9em;
+    margin-top: 40px;
+    border-top: 1px solid #2e3c01;
+}
+
+.index-hero {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.index-hero h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #4b5563;
+    margin-bottom: 40px;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 25px;
+    width: 250px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease;
+    text-align: left;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card h2 {
+    margin-top: 0;
+    color: #1e40af;
+}
+
+.card p {
+    color: #374151;
+    font-size: 0.95em;
+}
+
+.about-section {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 0 20px;
+    line-height: 1.7;
+}
+
+.about-section h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #2C4001;
+}
+
+.about-section p {
+    margin-bottom: 15px;
+    color: #5A7302;
+}
+
+.user-info a {
+    margin-left: 15px;
+    padding: 6px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.btn-login {
+    background-color: #1b8c2f;
+    color: white;
+    border: none;
+}
+
+.btn-login:hover {
+    background-color: #146823;
+}
+
+.btn-signup {
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+}
+
+.btn-signup:hover {
+    background-color: #2563eb;
+}
+
+.btn-logout {
+    background-color: #ef4444;
+    color: white;
+    border: none;
+    margin-left: 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+.btn-logout:hover {
+    background-color: #b91c1c;
+}
+
+.avatar {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+}
+
+
+/* Index page styles */
+
+.index-hero {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.subtitle {
+  font-size: 1.2em;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap; /* para mobile funcionar bem */
+}
+
+.card {
+  background-color: #f5f5f5;
+  padding: 20px 30px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #172601;
+  width: 200px;
+  box-shadow: 0 4px 6px rgb(0 0 0 / 0.1);
+  transition: background-color 0.3s;
+}
+
+.card:hover {
+  background-color: #e2e8f0;
+}
+
+.login-card {
+  max-width: 400px;
+  margin: 5rem auto;
+  padding: 2.5rem 3rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+}
+
+.login-card h2 {
+  margin-bottom: 2rem;
+  font-weight: 700;
+  color: #2563eb;
+  font-size: 2rem;
+}
+
+.login-card form input[type="text"],
+.login-card form input[type="password"],
+.login-card form input[type="email"] {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 1.4rem;
+  border: 1.8px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.login-card form input[type="text"]:focus,
+.login-card form input[type="password"]:focus,
+.login-card form input[type="email"]:focus {
+  border-color: #2563eb;
+  outline: none;
+  box-shadow: 0 0 8px rgba(37, 99, 235, 0.4);
+}
+
+.login-card form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #2563eb;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-card form button:hover {
+  background-color: #1e40af;
+}
+
+.login-card p {
+  margin-top: 1.5rem;
+  font-size: 0.95rem;
+  color: #4b5563;
+}
+
+.login-card p a {
+  color: #2563eb;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.login-card p a:hover {
+  color: #1e40af;
+}

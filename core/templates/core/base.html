@@ -1,11 +1,47 @@
+{% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>{% block title %}CRM - Página{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'core/style.css' %}">
 </head>
 <body>
-    <h1>OI LEO</h1>
+    <header class="crm-header">
+        <div class="header-left">
+            <a href="{% url 'index' %}">
+                <img src="{% static 'core/logo-bio-mundo.webp' %}" alt="Logo" class="logo-img" />
+            </a>
+        </div>
+        <nav class="nav-links">
+            <a href="#">Clientes</a>
+            <a href="#">Relatórios</a>
+            <a href="{% url 'about' %}">Sobre</a>
+        </nav>
+
+        <div class="user-info">
+        {% if user.is_authenticated %}
+            <img src="https://i.pravatar.cc/30" alt="User Avatar" class="avatar">
+            <span>{{ user.username }}</span>
+            <form action="{% url 'logout' %}" method="post" style="display: inline;">
+                {% csrf_token %}
+                <button type="submit" class="btn-logout">Sair</button>
+            </form>
+        {% else %}
+            <a href="{% url 'login' %}" class="btn-login">Login</a>
+            <a href="{% url 'signup' %}" class="btn-signup">Cadastrar</a>
+        {% endif %}
+    </div>
+
+    </header>
+
+    <main class="main-content">
+        {% block content %}
+        {% endblock %}
+    </main>
+    <footer class="crm-footer">
+        <p>&copy; {{ year|default:"2025" }} MeuCRM - Bio Mundo. Todos os direitos reservados.</p>
+    </footer>
+
 </body>
 </html>

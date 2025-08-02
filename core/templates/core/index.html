@@ -1,0 +1,26 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Início - MeuCRM{% endblock %}
+
+{% block content %}
+<section class="index-hero">
+    <h1>Bem-vindo ao MeuCRM</h1>
+    {% if user.is_authenticated %}
+        Olá, {{ user.username }} | <a href="{% url 'logout' %}">Sair</a>
+    {% else %}
+        <a href="{% url 'login' %}">Entrar</a> | <a href="{% url 'signup' %}">Cadastrar</a>
+    {% endif %}
+    <p class="subtitle">Gerencie seus clientes e relatórios de forma eficiente.</p>
+
+    <div class="card-container">
+        <a href="#" class="card">
+            <h2>Clientes</h2>
+            <p>Ver lista de clientes, adicionar ou editar registros.</p>
+        </a>
+        <a href="#" class="card">
+            <h2>Relatórios</h2>
+            <p>Acompanhe as interações e tenha insights valiosos.</p>
+        </a>
+    </div>
+</section>
+{% endblock %}
